@@ -10,11 +10,16 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    const nota = parseFloat(prompt("Digite a nota:").trim().replace(",","."));
 
     //Processamento
+    const conceito = (nota >= 9.0 && nota <= 10.0) ? "A" :
+                 (nota >= 8.0 && nota <= 8.9) ? "B" :
+                 (nota >= 7.0 && nota <= 7.9) ? "C" :
+                 (nota >= 6.0 && nota <= 6.9) ? "D" :
+                 (nota >= 0 && nota <= 5.9) ? "E" : "Nota inválida";
 
-    
     //Saída
+    alert("Conceito: " + conceito);
 
 </script>

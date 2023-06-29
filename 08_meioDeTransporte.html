@@ -6,12 +6,19 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
+    const precoLitroCombustivel = parseFloat(prompt("Digite o preço do litro do combustível:").trim().replace(",","."));
+    const litrosUtilizados = parseFloat(prompt("Digite a quantidade de litros utilizados diariamente:").trim().replace(",","."));
+    const precoTransportePublico = parseFloat(prompt("Digite o preço do transporte público diário:").trim().replace(",","."));
 
     //Processamento
+    const custoCombustivel = precoLitroCombustivel * litrosUtilizados;
+    const custoTransportePublico = precoTransportePublico * 2;
 
+    const meioTransporte = custoCombustivel < custoTransportePublico ? "Combustível" : "Transporte público";
+    const custoTotal = custoCombustivel < custoTransportePublico ? custoCombustivel : custoTransportePublico;
     
     //Saída
+    alert(`Meio de transporte mais barato: ${meioTransporte}\nCusto total diário: R$ ${custoTotal}`);
 
     
 </script>

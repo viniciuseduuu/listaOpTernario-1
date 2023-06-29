@@ -8,11 +8,22 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
+    const precoProduto = parseFloat(prompt("Digite o preço do produto:").trim());
+
 
 
     //Processamento
+    const novoPreco = precoProduto <= 280
+  ? precoProduto * 1.2
+  : precoProduto <= 700
+    ? precoProduto * 1.15
+    : precoProduto <= 1500
+      ? precoProduto * 1.1
+      : precoProduto * 1.05;
 
     
     //Saída
+    alert("O novo preço do produto é: R$ " + novoPreco.toFixed(2));
+    
 
 </script>

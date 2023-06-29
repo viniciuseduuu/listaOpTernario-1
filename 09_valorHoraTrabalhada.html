@@ -8,11 +8,19 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
+    const horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas semanalmente:").trim().replace(",","."));
+    const valorPorHora = parseFloat(prompt("Digite o valor recebido por hora trabalhada:").trim().replace(",","."));
 
     //Processamento
+    const salarioSemAdicional = horasTrabalhadas * valorPorHora;
+    const adicional20 = horasTrabalhadas > 45 && horasTrabalhadas <= 60 ? (horasTrabalhadas - 45) * (valorPorHora * 0.2) : 0;
+    const adicional30 = horasTrabalhadas > 60 ? (horasTrabalhadas - 60) * (valorPorHora * 0.3) : 0;
 
-    
+    const salarioFinal = salarioSemAdicional + adicional20 + adicional30;
+    const precoHoraTrabalhada = salarioFinal / horasTrabalhadas;
+
     //Saída
+
+    alert(`Salário final semanal: R$ ${salarioFinal.toFixed(2)}\nPreço de cada hora trabalhada: R$ ${precoHoraTrabalhada.toFixed(2)}`);
 
 </script>

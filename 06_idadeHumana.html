@@ -8,11 +8,21 @@
     // - cães grandes: fator 7.
 
     //Entrada
+    const idadeHumano = prompt("Digite a idade do seu cão em anos humanos:").trim();
+const porteCao = prompt("Digite o porte do seu cão (pequeno, médio ou grande").trim();
 
+   //Processamento
+   const fator = porteCao === "pequeno"
+  ? 5
+  : porteCao === "médio"
+    ? 6
+    : porteCao === "grande"
+     7;
 
-    //Processamento
-
+const idadeCao = idadeHumano * fator;
     
     //Saída
+    alert("A idade do seu cão em anos de cão é: " + idadeCao);
+
 
 </script>
